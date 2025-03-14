@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='organiser.css') }}">
+
+{% block content %}
+<div class="register-page">
+    <h1>Create Your Room</h1>
+    <form method="POST" action="{{ url_for('create_room') }}">
+        <label>
+            <h4>Room Name</h4>
+            <input type="text" name="roomName" required>
+        </label>
+        <br>
+        <label>
+            <h4>Room Event</h4>
+            <input type="text" name="roomEvent" required>
+        </label>
+        <br>
+        <label>
+            <h4>Room Bio</h4>
+            <input type="text" name="shortBio" required>
+        </label>
+        <br>
+        <label>
+            <h4>Room Description</h4>
+            <textarea name="roomDescription" required></textarea>
+        </label>
+        <br>
+        <button type="submit">Create A Room</button>
+    </form>
+</div>
+{% endblock %}

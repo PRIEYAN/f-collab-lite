@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='front.css') }}">
+</head>
+<body>
+    <div class="front-container">
+        <div class="front-content">
+            <h1 class="username-title">
+                <strong>{% if session['username'] %} {{ session['username'] }} {% else %} Guest {% endif %}</strong>
+            </h1>
+            <div class="front-button-group">
+                <button class="front-action-button" onclick="window.location.href='{{ url_for('team_registration') }}'">Create Team</button>
+                <button class="front-action-button" onclick="window.location.href='{{ url_for('join_existing_team') }}'">Join Team</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

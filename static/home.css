@@ -1,0 +1,145 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #f1f1f1 0%, #b7b7b7 , grey, rgb(147, 147, 147));
+  animation: gradientAnimation 7s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-left .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  align-items: left;
+  top: 5px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #000000;
+  box-shadow: #333;
+}
+.nav-button {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #898989;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+.action-button {
+  background: linear-gradient(45deg, #989898, #0a0a0a);
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background-size: 200% 200%;
+  animation: rgbEffect 3s ease infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-button:hover {
+  background: linear-gradient(45deg, #c6c6c6, #838383, #eaeaff);
+  background-size: 200% 200%;
+  animation: rgbEffect 3s ease infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes rgbEffect {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 5.1rem;
+  margin-left: 7rem;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 7rem;
+}
+
+.action-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #828482;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #7b7c7b;
+}
+
+.large-image {
+  width: 600px;
+  height: 600px;
+  transform: translate(120%,-80%);
+}

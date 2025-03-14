@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Team</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Register.css') }}">
+</head>
+<body>
+    <div class="register-page">
+        <h1>Own Your Team in f-Collab</h1>
+
+        <!-- Fixed Form Action -->
+        <form action="{{ url_for('team_registration') }}" method="post">
+            <label>
+                <h4>Team Name</h4>
+                <input type="text" name="teamName" required>
+            </label>
+            <br>
+            <label>
+                <h4>Team Slogan</h4>
+                <input type="text" name="slogan" required>
+            </label>
+            <br>
+            <label>
+                <h4>Short Bio About Your Team</h4>
+                <textarea name="bio" required></textarea>
+            </label>
+            <br>
+
+            <button type="submit">Create A Team</button>
+        </form>
+
+        {% if message %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
